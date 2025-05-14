@@ -1,0 +1,123 @@
+:root {
+  font-family: 'Pretendard', 'Noto Sans KR', 'Roboto', 'Arial', sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+
+  --primary-color: #5568FE;
+  --primary-light: #818BFE;
+  --primary-dark: #3647E0;
+  --secondary-color: #FE5568;
+  --secondary-light: #FF818B;
+  --secondary-dark: #E03647;
+  --success-color: #2ED573;
+  --error-color: #FF4757;
+  --warning-color: #FFA502;
+  --background-color: #F5F7FA;
+  --paper-color: #FFFFFF;
+  --text-primary: #2A3240;
+  --text-secondary: #5F6B7A;
+
+  color-scheme: light;
+  color: var(--text-primary);
+  background-color: var(--background-color);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    var(--background-color) 0%,
+    rgba(245, 247, 250, 0.8) 100%
+  );
+  background-attachment: fixed;
+  position: relative;
+}
+
+/* 배경 장식 요소 */
+body::before {
+  content: "";
+  position: fixed;
+  top: -100px;
+  right: -100px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: linear-gradient(
+    45deg,
+    rgba(85, 104, 254, 0.1),
+    rgba(254, 85, 104, 0.05)
+  );
+  z-index: -1;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  bottom: -100px;
+  left: -100px;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: linear-gradient(
+    45deg,
+    rgba(254, 85, 104, 0.05),
+    rgba(85, 104, 254, 0.1)
+  );
+  z-index: -1;
+}
+
+/* 스크롤바 스타일링 */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(85, 104, 254, 0.2);
+  border-radius: 10px;
+  border: 3px solid var(--background-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(85, 104, 254, 0.4);
+}
+
+/* 텍스트 선택 스타일 */
+::selection {
+  background-color: rgba(85, 104, 254, 0.2);
+  color: var(--primary-dark);
+}
+
+/* 부드러운 애니메이션 효과 */
+button, a, .MuiPaper-root, .MuiCard-root, .MuiTextField-root {
+  transition: all 0.3s ease !important;
+}
+
+/* 기본 헤더 스타일 */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+
+/* 반응형 컨테이너 */
+@media (max-width: 900px) {
+  .MuiContainer-root {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
