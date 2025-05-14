@@ -14,7 +14,7 @@
 ## 스크린샷
 
 ### 홈 화면
-![홈 화면](1.png)
+![홈 화면](./screenshots/1.png)
 
 ### Firestore 데이터베이스 콘솔
-![Firestore 콘솔](2.png)
+![Firestore 콘솔](./screenshots/2.png)
